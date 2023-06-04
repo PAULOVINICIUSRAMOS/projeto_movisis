@@ -1,0 +1,96 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_novos"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_marginStart="2dp"
+            android:background="@drawable/ic_icon_metronorte" />
+
+        <TextView
+            android:id="@+id/txt_novos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_novos"
+            android:layout_marginStart="8dp"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_used_cars"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/ic_icon_metronorte" />
+
+        <TextView
+            android:id="@+id/txt_seminovos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_seminovos"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_acessorios"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_marginStart="9dp"
+            android:background="@drawable/ic_icon_metronorte" />
+
+        <TextView
+            android:id="@+id/txt_acessorios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_acessorios"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_oficina"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:background="@drawable/ic_icon_metronorte" />
+
+        <TextView
+            android:id="@+id/txt_oficina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_oficina"
+            android:textSize="17sp"
+            android:layout_marginStart="7dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</LinearLayout>

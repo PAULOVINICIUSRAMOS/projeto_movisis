@@ -1,0 +1,50 @@
+[
+  {
+    "model": "Sonic",
+    "year": "2021",
+    "price": 27999,
+    "urlImage": "ic_sonic_2021"
+  },
+  {
+    "model": "Spin",
+    "year": "2020",
+    "price": 49999,
+    "urlImage": "ic_spin_2020"
+  },
+  {
+    "model": "Malibu",
+    "year": "2022",
+    "price": 84999,
+    "urlImage": "ic_malibu_2021"
+  },
+  {
+    "model": "Equinox",
+    "year": "2023",
+    "price": 88999,
+    "urlImage": "ic_equinox_2023"
+  },
+  {
+    "model": "Onix",
+    "year": "2022",
+    "price": 30999,
+    "urlImage": "ic_onix"
+  },
+  {
+    "model": "Camaro",
+    "year": "2022",
+    "price": 129999,
+    "urlImage": "ic_camaro_2022"
+  },
+  {
+    "model": "Cruze",
+    "year": "2022",
+    "price": 59999,
+    "urlImage": "ic_cruze_2022"
+  },
+  {
+    "model": "Tracker",
+    "year": "2022",
+    "price": 69999,
+    "urlImage": "ic_tracker_2022"
+  }
+]

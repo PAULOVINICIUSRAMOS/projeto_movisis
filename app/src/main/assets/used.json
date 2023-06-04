@@ -1,0 +1,26 @@
+[
+  {
+    "model": "CORSA CLASSIC 1.4",
+    "year": "2011",
+    "price": 32900,
+    "urlImage": "ic_corsa_2018"
+  },
+  {
+    "model": "PRISMA 1.4 ADVANTAGE",
+    "year": "2018",
+    "price": 49999,
+    "urlImage": "ic_prisma_2018"
+  },
+  {
+    "model": "CAMARO 6.2 V8 COUPÉ",
+    "year": "2015",
+    "price": 225000,
+    "urlImage": "ic_camaro_2015"
+  },
+  {
+    "model": "CRUZE SPORT6 2015",
+    "year": "2015",
+    "price": 30999,
+    "urlImage": "ic_cruze_2015"
+  }
+]

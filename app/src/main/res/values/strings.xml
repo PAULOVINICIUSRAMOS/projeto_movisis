@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">movisis_project</string>
+    <string name="menu">Menu</string>
+    <string name="imagem">Imagem</string>
+    <string name="txt_oficina">Oficina</string>
+    <string name="txt_acessorios">Acessórios</string>
+    <string name="txt_seminovos">Seminovos</string>
+    <string name="txt_novos">Novos</string>
+    <string name="home">Home</string>
+    <string name="settings">Configurações</string>
+    <string name="profile">Perfil</string>
+    <string name="support">Suporte</string>
+    <string name="logout">Sair</string>
+    <string name="navigation_drawer_open">Abrir Menu</string>
+    <string name="navigation_drawer_close">Fechar Menu</string>
+</resources>

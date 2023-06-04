@@ -1,0 +1,45 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="25dp"
+    android:orientation="horizontal">
+
+    <ImageButton
+        android:id="@+id/btn_menu"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_menu"
+        android:contentDescription="@string/menu"
+        android:background="@color/white"
+        android:layout_gravity="center_vertical"/>
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1.2"
+        android:layout_marginStart="12dp"
+        android:contentDescription="@string/imagem"
+        android:src="@drawable/ic_grupo_metronorte"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="27dp"
+        android:layout_weight="0.1"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:contentDescription="@string/imagem"
+        android:src="@drawable/ic_notification" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.2"
+        android:background="@drawable/image_profile"
+        android:contentDescription="@string/imagem"
+        android:scaleType="centerCrop" />
+
+</LinearLayout>
