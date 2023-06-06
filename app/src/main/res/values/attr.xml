@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="InformationComponent">
+        <attr name="information_title" format="string" />
+        <attr name="information_text" format="string" />
+    </declare-styleable>
+
+    <attr name="fontPath" format="string" />
+    <item name="calligraphy_tag_id" type="id" />
+
+</resources>

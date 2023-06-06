@@ -13,4 +13,8 @@
     <string name="logout">Sair</string>
     <string name="navigation_drawer_open">Abrir Menu</string>
     <string name="navigation_drawer_close">Fechar Menu</string>
+    <string name="action_search">"Buscar"</string>
+    <string name="digite_sua_mensagem">Digite sua mensagem</string>
+    <string name="change_password">Alterar Senha</string>
+    <string name="personal_data">Dados Pessoais</string>
 </resources>

@@ -1,8 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <style name="CustomCardViewStyle">
+        <item name="android:layout_marginStart">6dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="cardCornerRadius">9dp</item>
+        <item name="cardElevation">5dp</item>
+    </style>
+    <style name="TextViewStyle">
+        <item name="android:layout_marginStart">15dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginEnd">15dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">19sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
     <style name="style_CardView">
         <item name="cardCornerRadius">8dp</item>
         <item name="cardElevation">4dp</item>
         <item name="cardBackgroundColor">@color/white</item>
+    </style>
+
+    <style name="style_selection">
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorGrayLight</item>
+    </style>
+
+    <style name="label">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorGrayLight</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="label.selection">
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="fontPath">fonts/Roboto-Regular.ttf</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/colorGrayLight</item>
+    </style>
+
+    <style name="label.info">
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textSize">19sp</item>
+        <item name="android:textIsSelectable">true</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <style name="label.info.regular">
+        <item name="fontPath">fonts/Roboto-Regular.ttf</item>
     </style>
 </resources>

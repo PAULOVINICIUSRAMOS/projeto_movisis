@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/information_component_title"
+        style="@style/label.selection"
+        android:text="texto de titlulo"/>
+
+    <TextView
+        android:id="@+id/information_component_text"
+        android:text="******"
+        style="@style/label.info.regular"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"/>
+
+
+</LinearLayout>
