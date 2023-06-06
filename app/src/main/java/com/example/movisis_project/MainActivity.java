@@ -13,13 +13,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.movisis_project.activity.HighlightsCarsActivity;
+import com.example.movisis_project.activity.ProfileActivity;
+import com.example.movisis_project.activity.SupportActivity;
 import com.example.movisis_project.databinding.ActivityMainBinding;
-import com.example.movisis_project.fragment.SupportFragment;
 import com.example.movisis_project.util.ViewPagerHelper;
 import com.google.android.material.navigation.NavigationView;
 
@@ -29,9 +28,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private ViewPager2 viewPagerCars;
     private final Handler handler = new Handler();
     private DrawerLayout drawerLayout;
+    private ViewPagerHelper viewPagerHelper;
 
     View mRoot;
-    private ViewPagerHelper viewPagerHelper;
     Context mContext;
 
     @Override
@@ -48,7 +47,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = binding.navigationView;
         navigationView.setNavigationItemSelectedListener(this);
         configButtonMenu();
-
     }
 
     @Override
@@ -130,12 +128,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         if (id == R.id.nav_support) {
-            SupportFragment fragment = new SupportFragment();
-            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-            transaction.replace(R.id.fragment_container, fragment);
-            transaction.commit();
+            Intent intent = new Intent(mContext, SupportActivity.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_profile) {
+            Intent intent = new Intent(mContext, ProfileActivity.class);
+            startActivity(intent);
         }
-
         return false;
     }
 
@@ -144,4 +142,3 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onPointerCaptureChanged(hasCapture);
     }
 }
-
