@@ -16,6 +16,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.movisis_project.activity.HighlightsCarsActivity;
+import com.example.movisis_project.activity.NotificationActivity;
+import com.example.movisis_project.activity.PersonalDataActivity;
 import com.example.movisis_project.activity.ProfileActivity;
 import com.example.movisis_project.activity.SupportActivity;
 import com.example.movisis_project.databinding.ActivityMainBinding;
@@ -47,6 +49,28 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = binding.navigationView;
         navigationView.setNavigationItemSelectedListener(this);
         configButtonMenu();
+        configButtonProfile();
+        configButtonNotification();
+    }
+
+    private void configButtonNotification() {
+        binding.headerId.notification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, NotificationActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void configButtonProfile() {
+        binding.headerId.photoHeader.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, PersonalDataActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
