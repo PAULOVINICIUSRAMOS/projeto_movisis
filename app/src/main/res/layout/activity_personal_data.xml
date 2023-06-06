@@ -1,0 +1,104 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+        style="@style/CustomCardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <com.example.movisis_project.component.InformationComponent
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:information_text="Texto 1"
+                app:information_title="Nome Completo" />
+
+            <com.example.movisis_project.component.InformationComponent
+                android:id="@+id/social_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:information_text="Texto 1"
+                app:information_title="Como gostaria de ser chamado?" />
+
+            <com.example.movisis_project.component.InformationComponent
+                android:id="@+id/document"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:information_text="Texto 1"
+                app:information_title="CPF" />
+
+            <com.example.movisis_project.component.InformationComponent
+                android:id="@+id/birthday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="17dp"
+                app:information_text="Texto 1"
+                app:information_title="Data Nascimento" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="17dp"
+                android:text="Localização"
+                android:textColor="@android:color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <com.example.movisis_project.component.InformationComponent
+                android:id="@+id/country_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:information_text="Pais"
+                app:information_title="Pais" />
+
+            <com.example.movisis_project.component.InformationComponent
+                android:id="@+id/state_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:information_text="Estado"
+                app:information_title="Estado" />
+
+            <com.example.movisis_project.component.InformationComponent
+                android:id="@+id/city_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="17dp"
+                app:information_text="date"
+                app:information_title="Cidade" />
+
+            <TextView
+                android:id="@+id/txt_contato"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="17dp"
+                android:text="Contato"
+                android:textColor="@android:color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <com.example.movisis_project.component.InformationComponent
+                android:id="@+id/email_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:information_text="E-mail"
+                app:information_title="E-mail" />
+
+            <com.example.movisis_project.component.InformationComponent
+                android:id="@+id/telephone_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:information_text="Número de Celular"
+                app:information_title="Número de Celular" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.core.widget.NestedScrollView>
