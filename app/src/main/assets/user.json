@@ -1,0 +1,11 @@
+{
+  "fullname": "João da Silva",
+  "socialname": "João",
+  "document": "123456789-09",
+  "datebirth": "1990-01-01",
+  "country": "Brasil",
+  "state": "Santa Catarina",
+  "city": "Florianopolis",
+  "email": "joaodasilva@example.com",
+  "mobilenumber": "987852230"
+}
