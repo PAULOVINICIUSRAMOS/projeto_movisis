@@ -1,6 +1,5 @@
 package com.example.movisis_project.util;
 
-
 import android.content.Context;
 import android.content.res.Resources;
 import android.util.TypedValue;
@@ -12,13 +11,9 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.movisis_project.adapter.CarSliderAdapter;
 import com.example.movisis_project.model.Car;
-import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.lang.reflect.Type;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -57,21 +52,10 @@ public class ViewPagerHelper {
     }
 
     private List<Car> generateSliderItems() {
-        List<Car> sliderItems = new ArrayList<>();
-        try {
-            InputStream inputStream = mContext.getAssets().open("newcars.json");
-            int size = inputStream.available();
-            byte[] buffer = new byte[size];
-            inputStream.read(buffer);
-            inputStream.close();
-            String json = new String(buffer, StandardCharsets.UTF_8);
-            Gson gson = new Gson();
-            Type carListType = new TypeToken<List<Car>>() {}.getType();
-            List<Car> cars = gson.fromJson(json, carListType);
-            sliderItems.addAll(cars);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        Type notificationListType = new TypeToken<List<Car>>() {
+        }.getType();
+        JsonLoader<Car> jsonLoader = new JsonLoader<>("newcars.json", notificationListType, mContext);
+        List<Car> sliderItems = jsonLoader.loadItemsFromJson();
 
         return sliderItems;
     }

@@ -1,11 +1,7 @@
 package com.example.movisis_project.activity;
 
-import android.content.Context;
-import android.content.res.AssetManager;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.view.MenuItem;
-import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;

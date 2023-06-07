@@ -17,14 +17,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.movisis_project.adapter.NotificationsAdapter;
 import com.example.movisis_project.databinding.FragmentNotificationBinding;
 import com.example.movisis_project.model.Notification;
+import com.example.movisis_project.util.JsonLoader;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.OutputStreamWriter;
 import java.lang.reflect.Type;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -55,23 +54,11 @@ public class NotificationFragment extends Fragment {
     }
 
     private List<Notification> loadItemsFromJson() {
-        List<Notification> items = new ArrayList<>();
-        try {
-            InputStream inputStream = getContext().getAssets().open("notification.json");
-            int size = inputStream.available();
-            byte[] buffer = new byte[size];
-            inputStream.read(buffer);
-            inputStream.close();
-
-            String json = new String(buffer, StandardCharsets.UTF_8);
-            Gson gson = new Gson();
-            Type listType = new TypeToken<List<Notification>>() {
-            }.getType();
-            items = gson.fromJson(json, listType);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return items;
+        Type notificationListType = new TypeToken<List<Notification>>() {
+        }.getType();
+        JsonLoader<Notification> jsonLoader = new JsonLoader<>("notification.json", notificationListType, getContext());
+        List<Notification> notificationList = jsonLoader.loadItemsFromJson();
+        return notificationList;
     }
 
     private void configButtonDelete() {
@@ -92,13 +79,13 @@ public class NotificationFragment extends Fragment {
             OutputStreamWriter writer = new OutputStreamWriter(requireContext().openFileOutput("notification.json", Context.MODE_PRIVATE));
             writer.write(emptyJson);
             writer.close();
-            Toast.makeText(requireContext(), "Dados apagados com sucesso!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(requireContext(), "Notificações apagadas com sucesso!", Toast.LENGTH_SHORT).show();
 
             mAdapter.setNotificationList(emptyList);
             mAdapter.notifyDataSetChanged();
         } catch (IOException e) {
             e.printStackTrace();
-            Toast.makeText(requireContext(), "Erro ao apagar os dados!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(requireContext(), "Erro ao apagar as notificações!", Toast.LENGTH_SHORT).show();
         }
     }
 }

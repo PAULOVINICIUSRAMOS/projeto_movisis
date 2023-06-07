@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.movisis_project.adapter.UsedCarAdapter;
 import com.example.movisis_project.databinding.FragmentAppointmentsBinding;
 import com.example.movisis_project.model.Car;
+import com.example.movisis_project.util.JsonLoader;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -48,23 +49,11 @@ public class HighlightsCarsFragment extends Fragment {
     }
 
     private List<Car> loadItemsFromJson() {
-        List<Car> items = new ArrayList<>();
-        try {
-            InputStream inputStream = requireContext().getAssets().open("used.json");
-            int size = inputStream.available();
-            byte[] buffer = new byte[size];
-            inputStream.read(buffer);
-            inputStream.close();
-
-            String json = new String(buffer, StandardCharsets.UTF_8);
-            Gson gson = new Gson();
-            Type listType = new TypeToken<List<Car>>() {
-            }.getType();
-            items = gson.fromJson(json, listType);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return items;
+        Type carListType = new TypeToken<List<Car>>() {
+        }.getType();
+        JsonLoader<Car> jsonLoader = new JsonLoader<>("used.json", carListType, getContext());
+        List<Car> carList = jsonLoader.loadItemsFromJson();
+        return carList;
     }
 }
 
